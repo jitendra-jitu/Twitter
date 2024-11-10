@@ -12,9 +12,12 @@
 </head>
 <style>
 
-
-
-
+  body {
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
 
   .custom-scrollbar::-webkit-scrollbar {
     display: none; /* Hide scrollbar in WebKit browsers */
@@ -29,50 +32,149 @@
 <body class="bg-black text-white cursor-pointer flex items-start md:space-x-4">
 
 
+  <div class="h-20 w-full bg-black block md:hidden fixed top-0 left-0 right-0 flex items-center justify-between p-4 z-20">
+    <!-- SVG Icon -->
+    
+    
+    <!-- Profile Image -->
+    <img class="w-10 h-10 rounded-full" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png" alt="Profile Image">
 
-  <div class="first w-[16vw] ml-2 md:ml-[8vw] pt-3 h-screen relative overflow-hidden">
-    <svg viewBox="0 0 24 24" aria-hidden="true" class="w-8 md:ml-3 invert">
+    <svg viewBox="0 0 24 24" class="w-8 invert" aria-hidden="true">
       <g>
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
       </g>
     </svg>
+
+    <!-- Upgrade Button -->
+    <a href="https://x.com/i/premium_sign_up" target="_blank" class="inline-block px-6 py-2 text-white bg-violet-500 hover:bg-violet-600 rounded-lg text-center">
+      Upgrade
+    </a>
+</div>
+
+
+<div class="first w-0 md:w-[16.5vw] ml-2 md:ml-[8vw] pt-3 h-screen relative overflow-hidden">
+
+  <!-- SVG Icon (Visible on all screens) -->
+  <svg viewBox="0 0 24 24" class="w-8 md:ml-3 invert" aria-hidden="true">
+    <g>
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+    </g>
+  </svg>
+
+  <!-- Sidebar and Taskbar Container (Visible on all screens) -->
+  <div class="p-3 md:p-0 md:flex md:flex-col justify-between md:space-y-2 mt-6 md:gap-0 md:static fixed bottom-0 w-full bg-black text-white md:w-auto z-50">
+    
+    
+
+    <!-- Explore (Visible on all screens) -->
+    <span class="flex-1 text-center md:text-left">
+      <span class="inline-flex items-center justify-center md:justify-start pb-2 pt-1 px-5 md:px-3 font-normal text-[#e7e9ea] text-xl hover:bg-zinc-900 hover:rounded-3xl">
+        <span class="material-symbols-outlined text-[30px]">notifications</span>
+        <span class="hidden md:block">Notifications</span>
+      </span>
     </span>
-    <div class="flex flex-col space-y-2 mt-6 gap-3 md:gap-0">
-      <span class="block"><span class="inline-flex items-center gap-4 pb-2 pt-1 md:px-3 font-medium text-xl hover:bg-zinc-900 hover:rounded-3xl"><span class="material-symbols-outlined text-[30px]">home</span><span class="hidden md:block">Home</span></span></span>
-      <span class="block"><span class="inline-flex items-center gap-4 pb-2 pt-1 md:px-3 font-medium text-xl hover:bg-zinc-900 hover:rounded-3xl"><span class="material-symbols-outlined text-[30px]">search</span><span class="hidden md:block">Explore</span></span></span>
-      <span class="block"><span class="inline-flex items-center gap-4 pb-2 pt-1 md:px-3 font-medium text-xl hover:bg-zinc-900 hover:rounded-3xl"><span class="material-symbols-outlined text-[30px]">notifications</span><span class="hidden md:block">Notifications</span></span></span>
-      <span class="block"><span class="inline-flex items-center gap-4 pb-2 pt-1 md:px-3 font-medium text-xl hover:bg-zinc-900 hover:rounded-3xl"><span class="material-symbols-outlined text-[30px]">mail</span><span class="hidden md:block">Messages</span></span></span>
-      <span class="block"><span class="inline-flex items-center gap-4 pb-2 pt-1 md:px-3 font-medium text-xl hover:bg-zinc-900 hover:rounded-3xl"><span class="material-symbols-outlined text-[30px]">home</span><span class="hidden md:block">Grok</span></span></span>
-      <span class="block"><span class="inline-flex items-center gap-4 pb-2 pt-1 md:px-3 font-medium text-xl hover:bg-zinc-900 hover:rounded-3xl"><span class="material-symbols-outlined text-[30px]">group</span><span class="hidden md:block">Communities</span></span></span>
-      <span class="block"><span class="inline-flex items-center gap-4 pb-2 pt-1 md:px-3 font-medium text-xl hover:bg-zinc-900 hover:rounded-3xl"><span class="material-symbols-outlined text-[30px]">workspace_premium</span><span class="hidden md:block">Premium</span></span></span>
-      <span class="block"><span class="inline-flex items-center gap-4 pb-2 pt-1 md:px-3 font-medium text-xl hover:bg-zinc-900 hover:rounded-3xl"><span class="material-symbols-outlined text-[30px]">flash_on</span><span class="hidden md:block">Verified Orgs</span></span></span>
-      <span class="block"><span class="inline-flex items-center gap-4 pb-2 pt-1 md:px-3 font-medium text-xl hover:bg-zinc-900 hover:rounded-3xl"><span class="material-symbols-outlined text-[30px]">person</span><span class="hidden md:block">Profile</span></span></span>
-      <span class="block"><span class="inline-flex items-center gap-4 pb-2 pt-1 md:px-3 font-medium text-xl hover:bg-zinc-900 hover:rounded-3xl"><span class="material-symbols-outlined text-[30px]">more_horiz</span><span class="hidden md:block">More</span></span></span>
-    </div>
 
-    <div class="postbtn bg-sky-500 relative w-10/12 p-2 md:w-full py-2 text-center rounded-full md:mr-4 items-center my-3">
-      <button class="text-xs font-semibold md:font-bold md:text-lg p-0 h-6 md:h-full">
-        Post
-      </button>
-    </div>
-    
-    
+    <!-- Home Button -->
+    <span class="flex-1 text-center md:text-left ">
+      <span class="inline-flex items-center justify-center md:justify-start pb-2 pt-1 px-5 md:px-3 font-bold text-xl hover:bg-zinc-900 hover:rounded-3xl">
+        <span class="material-symbols-outlined text-[30px]">home</span>
+        <span class="hidden md:block">Home</span>
+      </span>
+    </span>
 
-    <div class="profile flex gap-4 md:px-4 relative mt-12 items-center">
-      <img class="w-10 h-10 rounded-full" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png" alt="">
-      <div class="names hidden md:block">
-        <div class="displayname">jitendra jitu</div>
-        <div class="username text-gray-500">@jitendr70901231</div>
-      </div>
-      <svg viewBox="0 0 24 24" aria-hidden="true" class="w-7 md:pl-3">
-          <g>
-            <path fill="white" d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2z"></path>
-          </g>
-        </svg>
-      </div>
+    <!-- Messages (Visible on all screens) -->
+    <span class="flex-1 text-center md:text-left">
+      <span class="inline-flex items-center justify-center md:justify-start pb-2 pt-1 px-5 md:px-3 font-normal text-[#e7e9ea] text-xl hover:bg-zinc-900 hover:rounded-3xl">
+        <span class="material-symbols-outlined text-[30px]">mail</span>
+        <span class="hidden md:block">Messages</span>
+      </span>
+    </span>
+    <span class="flex-1 text-center md:text-left ">
+      <span class="inline-flex items-center justify-center md:justify-start pb-2 pt-1 px-5 md:px-3 font-normal text-[#e7e9ea] text-xl hover:bg-zinc-900 hover:rounded-3xl">
+        <span class="material-symbols-outlined text-[30px]">search</span>
+        <span class="hidden md:block">Explore</span>
+      </span>
+    </span>
 
+    <!-- Communities (Visible on all screens) -->
+    <span class="flex-1 text-center md:text-left">
+      <span class="inline-flex items-center justify-center md:justify-start pb-2 pt-1 md:px-3 font-normal text-[#e7e9ea] text-xl hover:bg-zinc-900 hover:rounded-3xl">
+        <span class="material-symbols-outlined text-[30px]">group</span>
+        <span class="hidden md:block">Communities</span>
+      </span>
+    </span>
+
+    <!-- Grok (Visible on all screens) -->
+    <div class="md:flex md:flex-col md:space-y-2  hidden md:block">
+      <span class="block">
+        <span class="inline-flex gap-4 pb-2 pt-1 md:px-3 font-normal text-[#e7e9ea] text-xl hover:bg-zinc-900 hover:rounded-3xl">
+          <span class="material-symbols-outlined text-[30px]">home</span>
+          <span class="hidden md:block">Grok</span>
+        </span>
+      </span>
+
+      <!-- Premium (Visible on all screens) -->
+      <span class=" hidden md:block">
+        <span class="inline-flex items-center gap-4 pb-2 pt-1 md:px-3 font-normal text-[#e7e9ea] text-xl hover:bg-zinc-900 hover:rounded-3xl">
+          <span class="material-symbols-outlined text-[30px]">workspace_premium</span>
+          <span>Premium</span>
+        </span>
+      </span>
+
+      <!-- Verified Orgs -->
+      <span class=" hidden md:block">
+        <span class="inline-flex items-center gap-4 pb-2 pt-1 md:px-3 font-normal text-[#e7e9ea] text-xl hover:bg-zinc-900 hover:rounded-3xl">
+          <span class="material-symbols-outlined text-[30px]">flash_on</span>
+          <span>Verified Orgs</span>
+        </span>
+      </span>
+
+      <!-- Profile -->
+      <span class=" hidden md:block">
+        <span class="inline-flex items-center gap-4 pb-2 pt-1 md:px-3 font-normal text-[#e7e9ea] text-xl hover:bg-zinc-900 hover:rounded-3xl">
+          <span class="material-symbols-outlined text-[30px]">person</span>
+          <span>Profile</span>
+        </span>
+      </span>
+
+      <!-- More -->
+      <span class=" hidden md:block">
+        <span class="inline-flex items-center gap-4 pb-2 pt-1 md:px-3 font-normal text-[#e7e9ea] text-xl hover:bg-zinc-900 hover:rounded-3xl">
+          <span class="material-symbols-outlined text-[30px]">more_horiz</span>
+          <span>More</span>
+        </span>
+      </span>
     </div>
+  </div>
+
+  <!-- Post Button -->
+  <div class="postbtn bg-sky-600 relative w-11/12 p-2 py-3 text-center rounded-full items-center my-3 flex flex-col hidden md:block">
+    <button class="text-xs font-semibold md:font-bold md:text-lg p-0 h-6 md:h-full hidden md:block">
+      Post
+    </button>
+    <button class="text-xs font-semibold md:font-bold md:text-lg p-0 h-6 block md:hidden">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6" style="color: rgb(255, 255, 255);">
+        <g>
+          <path d="M23 3c-6.62-.1-10.38 2.421-13.05 6.03C7.29 12.61 6 17.331 6 22h2c0-1.007.07-2.012.19-3H12c4.1 0 7.48-3.082 7.94-7.054C22.79 10.147 23.17 6.359 23 3zm-7 8h-1.5v2H16c.63-.016 1.2-.08 1.72-.188C16.95 15.24 14.68 17 12 17H8.55c.57-2.512 1.57-4.851 3-6.78 2.16-2.912 5.29-4.911 9.45-5.187C20.95 8.079 19.9 11 16 11zM4 9V6H1V4h3V1h2v3h3v2H6v3H4z"></path>
+        </g>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Profile Section (Visible on all screens) -->
+  <div class="profile flex gap-4 md:px-4 relative mt-12 items-center  hidden md:block">
+    <img class="w-10 h-10 rounded-full" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png" alt="">
+    <div class="names">
+      <div class="displayname">Jitendra Jitu</div>
+      <div class="username text-gray-500">@jitendr70901231</div>
     </div>
+    <svg viewBox="0 0 24 24" aria-hidden="true" class="w-7 md:pl-3">
+      <g>
+        <path fill="white" d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2z"></path>
+      </g>
+    </svg>
+  </div>
+</div>
 
 
 
@@ -80,7 +182,7 @@
 
     <!-- Second (Content) Section -->
 
-    <div class="second  w-fit md:w-[40vw] h-screen bg-black border-r border-l border-[#424548] z-10 overflow-y-auto custom-scrollbar">
+    <div class="second w-full md:w-[40vw] lg:w-[40vw] h-screen bg-black md:border-r md:border-l md:border-[#424548] z-10 overflow-y-auto custom-scrollbar md:static md:border-none">
       
       <div class="top flex  border-b border-[rgb(74,76,79)] sticky top-0 bg-black opacity-70">
 
@@ -163,7 +265,7 @@
 
     <div class="posts">
 
-      <div class="post flex p-3 gap-2 border border-t-1 border-[rgb(74,76,79)]">
+      <div class="post flex p-3 gap-2 md:border md:border-t-1 md:border-[rgb(74,76,79)]">
 
         <img class="h-7 md:h-10 rounded-full " src="https://pbs.twimg.com/profile_images/1849727333617573888/HBgPUrjG_400x400.jpg" alt="">     
         <div class="posteduserdetails">
@@ -182,7 +284,7 @@
               </div>
           </div>
 
-          <img class="mt-4 mr-4 rounded-xl" src="https://pbs.twimg.com/media/Gbty0ylX0BIEPA4?format=jpg&name=medium" alt="" srcset="">
+          <img class="mt-4 mr-4 rounded-xl w-fit" src="https://pbs.twimg.com/media/Gbty0ylX0BIEPA4?format=jpg&name=medium" alt="" srcset="">
 
  
           <div class="reactions flex justify-between my-3">
@@ -241,7 +343,7 @@
       </div>
 
 
-      <div class="post flex p-3 gap-2 border border-t-1 border-[rgb(74,76,79)]">
+      <div class="post flex p-3 gap-2 md:border md:border-t-1 md:border-[rgb(74,76,79)]">
 
         <img class="h-7 md:h-10 rounded-full " src="https://pbs.twimg.com/profile_images/1815489891108544512/H4o8ID3n_400x400.jpg" alt="">     
         <div class="posteduserdetails">
@@ -324,7 +426,7 @@
 
 
 
-      <div class="post flex p-3 gap-2 border border-t-1 border-[rgb(74,76,79)]">
+      <div class="post flex p-3 gap-2 md:border md:border-t-1 md:border-[rgb(74,76,79)]">
 
         <img class="h-7 md:h-10 rounded-full " src="https://pbs.twimg.com/profile_images/1833509376528945157/5AeMNn9f_400x400.jpg" alt="">     
         <div class="posteduserdetails">
@@ -401,7 +503,7 @@
         </div>
       </div>
 
-      <div class="post flex p-3 gap-2 border border-t-1 border-[rgb(74,76,79)]">
+      <div class="post flex p-3 gap-2 md:border md:border-t-1 md:border-[rgb(74,76,79)]">
 
         <img class="h-7 md:h-10 rounded-full " src="https://pbs.twimg.com/profile_images/1849116810290831360/YMxqVvcd_400x400.jpg" alt="">     
         <div class="posteduserdetails">
@@ -488,7 +590,7 @@
       </div>
 
 
-      <div class="post flex p-3 gap-2 border border-t-1 border-[rgb(74,76,79)]">
+      <div class="post flex p-3 gap-2 md:border md:border-t-1 md:border-[rgb(74,76,79)] ">
 
         <img class="h-7 md:h-10 rounded-full " src="https://pbs.twimg.com/profile_images/1849727333617573888/HBgPUrjG_400x400.jpg" alt="">     
         <div class="posteduserdetails">
@@ -565,7 +667,7 @@
       </div>
 
 
-      <div class="post flex p-3 gap-2 border border-t-1 border-[rgb(74,76,79)]">
+      <div class="post flex p-3 gap-2 md:border md:border-t-1 md:border-[rgb(74,76,79)]">
 
         <img class="h-7 md:h-10 rounded-full" src="https://pbs.twimg.com/profile_images/1849727333617573888/HBgPUrjG_400x400.jpg" alt="">     
         <div class="posteduserdetails">
@@ -640,7 +742,7 @@
           </div>
         </div>
       </div>
-      <div class="post flex p-3 gap-2 border border-t-1 border-[rgb(74,76,79)]">
+      <div class="post flex p-3 gap-2 md:border md:border-t-1 md:border-[rgb(74,76,79)]">
 
         <img class="h-7 md:h-10 rounded-full" src="https://pbs.twimg.com/profile_images/1849727333617573888/HBgPUrjG_400x400.jpg" alt="">     
         <div class="posteduserdetails">
@@ -717,7 +819,7 @@
       </div>
 
 
-      <div class="post flex p-3 gap-2 border border-t-1 border-[rgb(74,76,79)]">
+      <div class="post flex p-3 gap-2 md:border md:border-t-1 md:border-[rgb(74,76,79)]">
 
         <img class="h-7 md:h-10 rounded-full" src="https://pbs.twimg.com/profile_images/1849727333617573888/HBgPUrjG_400x400.jpg" alt="">     
         <div class="posteduserdetails">
@@ -792,7 +894,7 @@
           </div>
         </div>
       </div>
-      <div class="post flex p-3 gap-2 border border-t-1 border-[rgb(74,76,79)]">
+      <div class="post flex p-3 gap-2md:border md:border-t-1 md:border-[rgb(74,76,79)]">
 
         <img class="h-7 md:h-10 rounded-full" src="https://pbs.twimg.com/profile_images/1849727333617573888/HBgPUrjG_400x400.jpg" alt="">     
         <div class="posteduserdetails">
@@ -869,7 +971,7 @@
       </div>
 
 
-      <div class="post flex p-3 gap-2 border border-t-1 border-[rgb(74,76,79)]">
+      <div class="post flex p-3 gap-2 md:border md:border-t-1 md:border-[rgb(74,76,79)]">
 
         <img class="h-7 md:h-10 rounded-full" src="https://pbs.twimg.com/profile_images/1849727333617573888/HBgPUrjG_400x400.jpg" alt="">     
         <div class="posteduserdetails">
@@ -946,7 +1048,7 @@
       </div>
 
 
-      <div class="post flex p-3 gap-2 border border-t-1 border-[rgb(74,76,79)]">
+      <div class="post flex p-3 gap-2 md:border md:border-t-1 md:border-[rgb(74,76,79)]">
 
         <img class="h-10 rounded-full " src="https://pbs.twimg.com/profile_images/1849727333617573888/HBgPUrjG_400x400.jpg" alt="">     
         <div class="posteduserdetails">
@@ -1022,7 +1124,7 @@
         </div>
       </div>
 
-      <div class="post flex p-3 gap-2 border border-t-1 border-[rgb(74,76,79)]">
+      <div class="post flex p-3 gap-2 md:border md:border-t-1 md:border-[rgb(74,76,79)]">
 
         <img class="h-10 rounded-full " src="https://pbs.twimg.com/profile_images/1849727333617573888/HBgPUrjG_400x400.jpg" alt="">     
         <div class="posteduserdetails">
