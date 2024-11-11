@@ -1197,10 +1197,6 @@ video {
   text-decoration-color: #ffffff;
 }
 
-.hover\:decoration-\[\#1d9bf0\]:hover {
-  text-decoration-color: #1d9bf0;
-}
-
 .hover\:decoration-1:hover {
   text-decoration-thickness: 1px;
 }
@@ -1402,4 +1398,62 @@ video {
   .lg\:w-\[40vw\] {
     width: 40vw;
   }
+}
+
+
+/* Fixed SVG button at the bottom-right */
+.fixed-bottom-right-btn {
+  position: fixed;
+  right: 1.25rem;  /* 5 for Tailwind's right-5 */
+  bottom: 5.25rem;  /* 5 for Tailwind's bottom-5 */
+  z-index: 9999;  /* Make sure it's above other elements */
+  background-color: rgb(29 155 240);  /* Tailwind's bg-blue-600 */
+  padding: 1rem;  /* Padding of 4 for Tailwind's p-4 */
+  border-radius: 9999px;  /* Tailwind's rounded-full */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Tailwind's shadow-lg */
+  cursor: pointer;  /* Pointer cursor on hover */
+  display: block;  /* Ensure block-level display for mobile */
+  opacity: 1;  /* Initially visible */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transition for opacity and transform */
+}
+
+/* Ensure the SVG is visible and styled correctly */
+.fixed-bottom-right-btn svg {
+  width: 1.6em;  /* Tailwind's w-10 */
+  height: 1.6rem;  /* Tailwind's h-10 */
+  fill: #ffffff;  /* White color for the SVG icon */
+}
+
+/* Hide on medium and above screens */
+@media (min-width: 768px) {
+  .fixed-bottom-right-btn {
+    display: none;
+  }
+}
+
+/* When scrolling, hide the button */
+.hide-on-scroll {
+  opacity: 0; /* Make it fade out */
+  transform: translateY(20px); /* Move it slightly down */
+}
+
+
+
+body {
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers */
+}
+.custom-scrollbar {
+  -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+html, body {
+  overflow: visible !important;
 }
